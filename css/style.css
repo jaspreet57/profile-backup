@@ -86,8 +86,8 @@ body {
 	 background: rgba(0, 0, 0, 0.27);
 	 padding-top: 20px;
 	 padding-bottom: 20px;
-	 margin-left: -6%;
-	 margin-right: -6%;
+	 margin-left: -5.5%;
+	 margin-right: -5.5%;
 }
 
 
@@ -211,7 +211,7 @@ body {
 }
 
 .navigation ul li a{
-	color: #4a2148;
+	color: #267272;
 	transition: all .2s;
 }
 
