@@ -1,0 +1,100 @@
+header.banner {
+    .name-height {
+        position: relative;
+        height: $name-logo-height;
+        margin-top: 80px;
+        @include breakpoint(m) {
+            margin-top: 180px;
+        }
+        img {
+            width: $name-logo-width;
+        }
+        .name-text {
+            position: absolute;
+            padding: 5px;
+            top: 50%;
+            transform: translate(0, -50%);
+            font-size: 3rem;
+            line-height: 3.5rem;
+            @include breakpoint(m) {  
+                font-size: 4rem;
+                line-height: 4.5rem;
+            }
+        }
+    }
+
+    // all about navbar
+    $nav-height: 40px;
+
+    nav.navbar {
+        height: $nav-height;
+        width: 95%;
+        margin: auto auto;
+        z-index: 99999999;
+        background-color: $app-background;
+        transition: background-color 1s;
+        @include breakpoint(m) {
+            width: 50%;
+            margin: auto auto;
+        }
+
+        ul li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            height: $nav-height;
+            line-height: $nav-height;
+            transition: all 1s;
+            a {
+                text-decoration: none;
+            }
+        }
+
+        hr {
+            width: 80%;
+            margin: auto auto;
+            border-top: 0px;
+            background: $app-blue;
+            height: 2px;
+            transition:  all 1s;
+            @include breakpoint(m) {
+                width: 50%;
+            }
+        }
+    }
+
+    .is-sticky nav.navbar {
+        background-color: rgba(255, 15, 15, 0.7);
+        transition: background-color 3s;
+        width: 100%;
+        height: $nav-height + $nav-height * .3;
+        z-index: 99999999;
+        @include breakpoint(m) {
+            width: 100%;
+        }
+        color: white;
+        ul li {
+            height: $nav-height + $nav-height * .3;
+            line-height: $nav-height + $nav-height * .3;
+            a {
+                color: white;
+                font-weight: 900;
+            }
+        }
+        hr {
+            width: 100%;
+            @include breakpoint(m) {
+                width: 100%;
+            }
+        }
+    }
+
+    // banner horizontal line down there
+    .banner-hr {
+        border-top: 3px double #8c8b8b;
+        margin-top: 80px;
+        @include breakpoint(m) {
+            margin-top: 180px;
+        }
+    }
+}

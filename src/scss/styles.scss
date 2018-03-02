@@ -9,6 +9,8 @@
 @import "node_modules/getbase/scss/base";
 
 // Overall Styles
+@import "styles/setup";
+@import "styles/banner";
 @import "styles/header";
 @import "styles/footer";
 
