@@ -1459,7 +1459,17 @@ input:-ms-input-placeholder {
     content: " (" attr(title) ")"; } }
 
 body {
-  background: #fff; }
+  background-color: #fff;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease; }
+
+body::after {
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0px;
+  left: 0px; }
 
 header.banner .name-height {
   position: relative;
@@ -1484,7 +1494,7 @@ header.banner .name-height {
         line-height: 4.5rem; } }
 
 header.banner nav.navbar {
-  height: 40px;
+  height: 60px;
   width: 95%;
   margin: auto auto;
   z-index: 99999999;
@@ -1499,8 +1509,8 @@ header.banner nav.navbar {
     display: inline-block;
     margin: 0;
     padding: 0;
-    height: 40px;
-    line-height: 40px;
+    height: 60px;
+    line-height: 60px;
     -webkit-transition: all 1s;
     transition: all 1s; }
     header.banner nav.navbar ul li a {
@@ -1509,8 +1519,9 @@ header.banner nav.navbar {
     width: 80%;
     margin: auto auto;
     border-top: 0px;
-    background: #0F0FFF;
-    height: 2px;
+    background: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    height: 3px;
     -webkit-transition: all 1s;
     transition: all 1s; }
     @media only screen and (min-width: 740px) {
@@ -1518,22 +1529,18 @@ header.banner nav.navbar {
         width: 50%; } }
 
 header.banner .is-sticky nav.navbar {
-  background-color: rgba(255, 15, 15, 0.7);
+  background-color: #87cfeb;
   -webkit-transition: background-color 3s;
   transition: background-color 3s;
   width: 100%;
-  height: 52px;
   z-index: 99999999;
   color: white; }
   @media only screen and (min-width: 740px) {
     header.banner .is-sticky nav.navbar {
       width: 100%; } }
-  header.banner .is-sticky nav.navbar ul li {
-    height: 52px;
-    line-height: 52px; }
-    header.banner .is-sticky nav.navbar ul li a {
-      color: white;
-      font-weight: 900; }
+  header.banner .is-sticky nav.navbar ul li a {
+    color: white;
+    font-weight: 900; }
   header.banner .is-sticky nav.navbar hr {
     width: 100%; }
     @media only screen and (min-width: 740px) {
@@ -1546,6 +1553,15 @@ header.banner .banner-hr {
   @media only screen and (min-width: 740px) {
     header.banner .banner-hr {
       margin-top: 180px; } }
+
+body.color-default {
+  background-color: #fff; }
+
+body.color-red {
+  background-color: #FF0F0F; }
+
+body.color-blue {
+  background-color: #0F0FFF; }
 
 .no-margin {
   margin: 0; }

@@ -1,5 +1,10 @@
 // reseting defaults
 
 body {
-    background: $app-background;
+    background-color: $app-background;
+    transition: background-color 1s ease;
+}
+
+body::after {
+    display: block; position: absolute; width: 1px; height: 100%; top: 0px; left: 0px;
 }

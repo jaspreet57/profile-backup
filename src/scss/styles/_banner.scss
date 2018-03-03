@@ -1,4 +1,5 @@
 header.banner {
+    // background-color: $app-background; TODO make this enabled when bottom style applied   
     .name-height {
         position: relative;
         height: $name-logo-height;
@@ -24,7 +25,7 @@ header.banner {
     }
 
     // all about navbar
-    $nav-height: 40px;
+    $nav-height: 60px;
 
     nav.navbar {
         height: $nav-height;
@@ -54,8 +55,8 @@ header.banner {
             width: 80%;
             margin: auto auto;
             border-top: 0px;
-            background: $app-blue;
-            height: 2px;
+            background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+            height: 3px;
             transition:  all 1s;
             @include breakpoint(m) {
                 width: 50%;
@@ -64,18 +65,15 @@ header.banner {
     }
 
     .is-sticky nav.navbar {
-        background-color: rgba(255, 15, 15, 0.7);
+        background-color: rgb(135, 207, 235);
         transition: background-color 3s;
         width: 100%;
-        height: $nav-height + $nav-height * .3;
         z-index: 99999999;
         @include breakpoint(m) {
             width: 100%;
         }
         color: white;
         ul li {
-            height: $nav-height + $nav-height * .3;
-            line-height: $nav-height + $nav-height * .3;
             a {
                 color: white;
                 font-weight: 900;
