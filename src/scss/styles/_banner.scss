@@ -1,16 +1,20 @@
 header.banner {
-    // background-color: $app-background; TODO make this enabled when bottom style applied   
+    background-color: $app-background;
     .name-height {
         position: relative;
-        height: $name-logo-height;
+        height: $name-logo-height * 0.8;
         margin-top: 50px;
         text-align: center;
         @include breakpoint(m) {
             text-align: inherit;
             margin-top: 180px;
+            height: $name-logo-height;
         }
         img {
-            width: $name-logo-width;
+            width: $name-logo-width * 0.8;
+            @include breakpoint(m) {
+                width: $name-logo-width;
+            }
         }
         .name-text {
             position: relative;
@@ -25,7 +29,14 @@ header.banner {
             h1 {
                 font-size: 2rem;
                 line-height: 2.5rem;
-                transition: all .5s;
+                span.before-name {
+                    color: white;
+                    background: $app-orange;
+                }
+                span.my-name {
+                    color: $app-orange;
+                    background: white;
+                }
                 @include breakpoint(m) {
                     font-size: 4rem;
                     line-height: 4.5rem;
@@ -33,6 +44,18 @@ header.banner {
                 @include breakpoint(l) {
                     font-size: 5rem;
                     line-height: 5.5rem;
+                }
+                transition: all .5s;
+            }
+
+            h1:hover {
+                span.before-name {
+                    color: black;
+                    background: inherit;
+                }
+                span.my-name {
+                    background: skyblue;
+                    color: white;
                 }
             }
             
@@ -49,6 +72,13 @@ header.banner {
                     line-height: 2rem;
                 }
             }
+        }
+    }
+
+    .name-height.name-height-no-img {
+        height: $name-logo-height/3;
+        @include breakpoint(m) {
+            height: $name-logo-height;
         }
     }
 
@@ -114,13 +144,13 @@ header.banner {
             }
         }
     }
+}
 
-    // banner horizontal line down there
-    .banner-hr {
-        border-top: 3px double #8c8b8b;
-        margin-top: 80px;
-        @include breakpoint(m) {
-            margin-top: 180px;
-        }
+
+section.banner-bottom {
+    height: 5px;
+    @include breakpoint(m) {
+        height: 180px;
     }
+    background-color: $app-background;
 }

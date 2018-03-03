@@ -41,6 +41,7 @@ $(document).ready(function() {
     * */
     var scroll = new SmoothScroll('a[href*="#"]', {
       speed: 1500,
+      offset: 100,
       easing: 'easeInOutCubic',
     });
 });

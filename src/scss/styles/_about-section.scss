@@ -1,0 +1,11 @@
+section.about-section {
+    padding-top: 200px;
+    height: 800px;
+    background-color: inherit;
+    transition: background-color 1s;
+    background: url('../img/pattern-5.png') top repeat-x;
+}
+
+body.color-default section.about-section {
+    background-color: $app-orange;
+}
