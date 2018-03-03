@@ -39,5 +39,8 @@ $(document).ready(function() {
     /*
     * Smooth Scroll plugin
     * */
-    var scroll = new SmoothScroll('a[href*="#"]');
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 1500,
+      easing: 'easeInOutCubic',
+    });
 });
