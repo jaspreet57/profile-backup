@@ -34,4 +34,10 @@ $(document).ready(function() {
       });    
       
     }).scroll();
+
+
+    /*
+    * Smooth Scroll plugin
+    * */
+    var scroll = new SmoothScroll('a[href*="#"]');
 });
