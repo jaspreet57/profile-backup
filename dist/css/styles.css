@@ -1474,24 +1474,51 @@ body::after {
 header.banner .name-height {
   position: relative;
   height: 216px;
-  margin-top: 80px; }
+  margin-top: 50px;
+  text-align: center; }
   @media only screen and (min-width: 740px) {
     header.banner .name-height {
+      text-align: inherit;
       margin-top: 180px; } }
   header.banner .name-height img {
     width: 100px; }
   header.banner .name-height .name-text {
-    position: absolute;
-    padding: 5px;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    font-size: 3rem;
-    line-height: 3.5rem; }
+    position: relative;
+    text-align: center; }
     @media only screen and (min-width: 740px) {
       header.banner .name-height .name-text {
-        font-size: 4rem;
-        line-height: 4.5rem; } }
+        position: absolute;
+        text-align: inherit;
+        padding: 5px;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%); } }
+    header.banner .name-height .name-text h1 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      -webkit-transition: all .5s;
+      transition: all .5s; }
+      @media only screen and (min-width: 740px) {
+        header.banner .name-height .name-text h1 {
+          font-size: 4rem;
+          line-height: 4.5rem; } }
+      @media only screen and (min-width: 980px) {
+        header.banner .name-height .name-text h1 {
+          font-size: 5rem;
+          line-height: 5.5rem; } }
+    header.banner .name-height .name-text h3 {
+      font-size: .7rem;
+      line-height: 1rem;
+      -webkit-transition: all .5s;
+      transition: all .5s; }
+      @media only screen and (min-width: 740px) {
+        header.banner .name-height .name-text h3 {
+          font-size: 1rem;
+          line-height: 1.5rem; } }
+      @media only screen and (min-width: 980px) {
+        header.banner .name-height .name-text h3 {
+          font-size: 1.5rem;
+          line-height: 2rem; } }
 
 header.banner nav.navbar {
   height: 60px;

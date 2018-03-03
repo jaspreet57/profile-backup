@@ -3,23 +3,51 @@ header.banner {
     .name-height {
         position: relative;
         height: $name-logo-height;
-        margin-top: 80px;
+        margin-top: 50px;
+        text-align: center;
         @include breakpoint(m) {
+            text-align: inherit;
             margin-top: 180px;
         }
         img {
             width: $name-logo-width;
         }
         .name-text {
-            position: absolute;
-            padding: 5px;
-            top: 50%;
-            transform: translate(0, -50%);
-            font-size: 3rem;
-            line-height: 3.5rem;
-            @include breakpoint(m) {  
-                font-size: 4rem;
-                line-height: 4.5rem;
+            position: relative;
+            text-align: center;
+            @include breakpoint(m) {
+                position: absolute;
+                text-align: inherit;
+                padding: 5px;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            h1 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                transition: all .5s;
+                @include breakpoint(m) {
+                    font-size: 4rem;
+                    line-height: 4.5rem;
+                }
+                @include breakpoint(l) {
+                    font-size: 5rem;
+                    line-height: 5.5rem;
+                }
+            }
+            
+            h3 {
+                font-size: .7rem;
+                line-height: 1rem;
+                transition: all .5s;
+                @include breakpoint(m) {  
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
+                @include breakpoint(l) {  
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
             }
         }
     }
