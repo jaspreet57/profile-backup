@@ -1460,8 +1460,8 @@ input:-ms-input-placeholder {
 
 body {
   background-color: #fff;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease; }
+  -webkit-transition: background-color 1.5s ease-in-out;
+  transition: background-color 1.5s ease-in-out; }
 
 body::after {
   display: block;

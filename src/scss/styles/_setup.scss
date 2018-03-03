@@ -2,7 +2,7 @@
 
 body {
     background-color: $app-background;
-    transition: background-color 1s ease;
+    transition: background-color 1.5s ease-in-out;
 }
 
 body::after {
